@@ -1,18 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="Home">
+    <v-row justify="center">
+      <v-col cols="4">
+        <counter :counter="counter" @add="counter += 1" @substract="counter -= 1"/>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
-export default class Home extends Vue {}
+<script>
+import Counter from '@/components/Counter.vue'
+export default {
+  components: { Counter },
+  data: () => ({
+    counter: -1,
+  }),  
+}
 </script>
+
+<style>
+
+</style>
