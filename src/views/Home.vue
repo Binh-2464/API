@@ -13,7 +13,7 @@ import Counter from '@/components/Counter.vue'
 export default {
   components: { Counter },
   data: () => ({
-    counter: -1,
+    posts: []
   }),  
 }
 </script>

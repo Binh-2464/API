@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import * as dayjs from "dayjs";
 
 export default {
   props: {
